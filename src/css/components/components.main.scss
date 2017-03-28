@@ -1,0 +1,156 @@
+body {
+  color: $white;
+  height: 100%;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+a, a:visited {
+  color: $white;
+  @extend .font__amatic;
+  @include mq($from: palm, $until:lap) {
+    color: inherit;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  border: 6px solid $white;
+  font-weight: 900;
+  display: inline;
+  padding: 4px 8px;
+  @include mq($from: palm, $until:lap) {
+    border: 0;
+  }
+}
+
+.font__amatic {
+  font-family: 'Amatic SC', cursive;
+}
+
+.font__lato {
+  font-family: 'Lato', sans-serif;
+}
+
+@mixin background-cover($path) {
+  @include mq($from: lap, $until:desk) {
+    background: url($path) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+
+.wrapper {
+  margin: 80px;
+  @include mq($from: lap, $until:desk) {
+    margin: 80px;
+  }
+  @include mq($from: palm, $until:lap) {
+    margin: 0;
+  }
+}
+.outer-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  background: $turquoise; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($turquoise_light, $turquoise); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($turquoise_light, $turquoise); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($turquoise_light, $turquoise); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($turquoise_light, $turquoise); /* Standard syntax */
+
+  @include mq($from: lap, $until:desk) {
+    width: 80px;
+    height: 80px;
+  }
+  @include mq($from: palm, $until:lap) {
+    position: relative;
+    width: 100%;
+    height: 2em;
+  }
+  a {
+    @extend .font__lato;
+    display: inherit;
+  }
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+}
+
+.logo-header {
+  width: 100%;
+  position: relative;
+  top: -410px;
+  margin-bottom: -410px;
+  @include mq($from: palm, $until:lap) {
+    opacity: .5;
+    filter: alpha(opacity=50);
+    position: fixed!important;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin: 0;
+  }
+}
+
+.sc-wrapper {
+  padding-top: 20px;
+  border: 20px solid $white;
+  height: 470px;
+  width: 690px;
+  margin: auto;
+}
+.sc-link {
+  position: relative;
+  left: -80px;
+  width: 80px;
+  height: 80px;
+  top: 0px;
+}
+
+#about-section {
+  background: $lila; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($blue_baby, $lila); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($blue_baby, $lila); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($blue_baby, $lila); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($blue_baby, $lila); /* Standard syntax */
+  position: relative;
+}
+
+#lineup-section {
+  left: 0;
+  background: $lila; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($blue_baby, $lila); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($blue_baby, $lila); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($blue_baby, $lila); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($blue_baby, $lila); /* Standard syntax */
+}
+
+#programm-section {
+  left: 0;
+  @include background-cover('../images/bg1.jpg');
+}
+
+#ads-section {
+  left: 0;
+  background: $lila; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($yellow, $blue_baby, $yellow); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($yellow, $blue_baby, $yellow); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($yellow, $blue_baby, $yellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($yellow, $blue_baby, $yellow); /* Standard syntax */
+}
+
+#infos-section {
+  left: 0;
+  background: $lila; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($yellow, $blue_baby, $yellow); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($yellow, $blue_baby, $yellow); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($yellow, $blue_baby, $yellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($yellow, $blue_baby, $yellow); /* Standard syntax */
+  z-index: 0;
+}

@@ -1,0 +1,24 @@
+<?
+  $name = 'artists';
+  spl_autoload_register(function ($name) {
+    echo "Want to load $name.\n";
+    throw new Exception("Unable to load $name.");
+  });
+
+  include_once( dirname( __DIR__ ) . '/../repositories/artists.php' );
+  $artists = new Artists();
+?>
+<div class="layout__item one-sixth left palm-one-whole">
+  <h3 class="ml+ clear palm-p0 palm-m0 left">LINEUP</h3>
+</div>
+<div class="layout__item four-sixths left palm-one-whole">
+    <?
+      foreach ($artists->getAll() as $name) {
+        echo "<div class='layout__item 1/5 left font__amatic delta'>".$name."</div>";
+      }
+    ?>
+</div>
+<div class="layout__item one-sixth left pt+ palm-one-whole">
+  <div class="vertical right bold">MAIN FLOOR</div>
+</div>
+<div class="clear">&nbsp;</div>

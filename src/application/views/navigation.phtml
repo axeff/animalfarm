@@ -1,0 +1,15 @@
+<?
+  $naviLeft = ["about" => "About", "lineup" => "Lineup", "programm" => "Programm"];
+  $naviRight = ["infos" => "Infos", "tickets" => "Tickets", "contact" => "Kontakt"];
+?>
+
+<div class="left">
+  <?foreach ($naviLeft as $key => $value) {?>
+    <a class='mr gamma' data-target='<?=$key?>' href='#<?=$key?>'><?=$value?></a>
+  <?}?>
+</div>
+<div class="right">
+  <?foreach ($naviRight as $key => $value) {?>
+    <a class='ml gamma' data-target='<?=$key?>' href='#<?=$key?>'><?=$value?></a>
+  <?}?>
+</div>
