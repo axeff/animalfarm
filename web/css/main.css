@@ -799,7 +799,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 80px;
   top: 0px; }
 
-#about-section {
+section[id*="-section"] {
   background: #6e237d;
   /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#2ea7e8, #6e237d);
@@ -811,19 +811,6 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(#2ea7e8, #6e237d);
   /* Standard syntax */
   position: relative; }
-
-#lineup-section {
-  left: 0;
-  background: #6e237d;
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#2ea7e8, #6e237d);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#2ea7e8, #6e237d);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#2ea7e8, #6e237d);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#2ea7e8, #6e237d);
-  /* Standard syntax */ }
 
 #programm-section {
   left: 0; }

@@ -13,12 +13,16 @@
 </div>
 <div class="layout__item four-sixths left palm-one-whole">
     <?
-      foreach ($artists->getAll() as $name) {
+      foreach ($artists->getAll() as $artist) {
+        $name = $artist['name'];
+        if (count($artist['link'])){
+          $name = '<a target="_blank" href="'.$artist['link'].'">'.$name.'</a>';
+        }
         echo "<div class='layout__item 1/5 left font__amatic delta'>".$name."</div>";
       }
     ?>
 </div>
 <div class="layout__item one-sixth left pt+ palm-one-whole">
-  <div class="vertical right bold">MAIN FLOOR</div>
+  <!--<div class="vertical right bold">MAIN FLOOR</div>-->
 </div>
 <div class="clear">&nbsp;</div>

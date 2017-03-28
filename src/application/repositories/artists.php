@@ -9,7 +9,24 @@ class Artists
 
   function __construct()
   {
-    $this->artists = ['LOREM', 'IPSUM', 'DOLOR', 'SIT', 'AMET', 'CONSETETUR', 'SADIPSCING', 'LOREM', 'IPSUM', 'DOLOR', 'SIT', 'AMET', 'CONSETETUR', 'LOREM', 'IPSUM', 'DOLOR', 'SIT', 'AMET', 'CONSETETUR', 'SADIPSCING'];
+    $this->artists = [
+      [
+        'name' => 'Miguel Rodriguez & Doyle Shepherd & Steven Strahl',
+        'link' => 'https://soundcloud.com/miguelrodriguez',
+      ],
+      [
+        'name' => 'Bernard Schiffbruch',
+        'link' => 'https://soundcloud.com/burnhard-1',
+      ],
+      [
+        'name' => 'Landhouse & Raddantze',
+        'link' => 'https://soundcloud.com/landhouse',
+      ],
+      [
+        'name' => 'Kleintierschaukel',
+        'link' => 'https://soundcloud.com/kleintierschaukel',
+      ],
+    ];
   }
 
   public function getAll()

@@ -113,22 +113,13 @@ h1, h2, h3, h4, h5, h6 {
   top: 0px;
 }
 
-#about-section {
+section[id*="-section"] {
   background: $lila; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient($blue_baby, $lila); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient($blue_baby, $lila); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient($blue_baby, $lila); /* For Firefox 3.6 to 15 */
   background: linear-gradient($blue_baby, $lila); /* Standard syntax */
   position: relative;
-}
-
-#lineup-section {
-  left: 0;
-  background: $lila; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient($blue_baby, $lila); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient($blue_baby, $lila); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient($blue_baby, $lila); /* For Firefox 3.6 to 15 */
-  background: linear-gradient($blue_baby, $lila); /* Standard syntax */
 }
 
 #programm-section {
