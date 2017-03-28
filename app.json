@@ -1,6 +1,6 @@
 {
-  "name": "Start on Heroku: PHP",
-  "description": "A barebones PHP app that makes use of the Silex web framework",
-  "repository": "https://github.com/heroku/php-getting-started",
+  "name": "AnimalFarm Festival",
+  "description": "Website for AnimalFarm Festival",
+  "repository": "https://github.com/axeff/animalfarm.git",
   "addons": []
 }
