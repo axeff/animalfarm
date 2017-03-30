@@ -176,7 +176,9 @@ h1, h2, h3, h4, h5, h6 {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    // border: 1px solid $white;
+    @include mq($from: palm, $until:lap) {
+      display: block;
+    }
   }
 
 }
@@ -218,6 +220,20 @@ h1, h2, h3, h4, h5, h6 {
   background: -o-linear-gradient($blue_baby, $blue_mid); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient($blue_baby, $blue_mid); /* For Firefox 3.6 to 15 */
   background: linear-gradient($blue_baby, $blue_mid); /* Standard syntax */
+
+  .border {
+    border: 5px solid $white;
+    h3 {
+      margin: 0 auto;
+      background-color: $blue_baby;
+      display: inline-block;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%); /* IE 9 */
+      -webkit-transform: translate(-50%,-50%); /* Chrome, Safari, Opera */
+
+    }
+  }
 }
 
 #getinthemood {

@@ -920,6 +920,9 @@ h1, h2, h3, h4, h5, h6 {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box; }
+    @media (min-width: 20em) and (max-width: 47.99em) {
+      .tiles .o-pack__item {
+        display: block; } }
 
 #about {
   background: none; }
@@ -974,6 +977,18 @@ h1, h2, h3, h4, h5, h6 {
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(#35a6de, #5977c2);
   /* Standard syntax */ }
+  #programm .border {
+    border: 5px solid #FFFFFF; }
+    #programm .border h3 {
+      margin: 0 auto;
+      background-color: #35a6de;
+      display: inline-block;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      /* IE 9 */
+      -webkit-transform: translate(-50%, -50%);
+      /* Chrome, Safari, Opera */ }
 
 #getinthemood {
   background: #5977c2;
