@@ -18,7 +18,7 @@
       $(window.location.hash+'').animatescroll();
     }
 
-    $('.navigation a').each(function(i, el){
+    $('.navigation a.navigation__item').each(function(i, el){
       $(el).click(function(){
         event.preventDefault();
         $('#'+$(el).data('target')+'').animatescroll();
