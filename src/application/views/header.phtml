@@ -1,24 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="<?=$_SERVER['REQUEST_URI']?>js/jquery-1.10.2.min.js"></script>
     <script src="<?=$_SERVER['REQUEST_URI']?>js/jquery.animatescroll.min.js"></script>
     <link rel="stylesheet" type="text/css" href="<?=$_SERVER['REQUEST_URI']?>css/main.css" /><link>
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Lato:400,900" rel="stylesheet">
     <title>Animalfarm</title>
-    <script>
-    $(document).ready(function() {
-      if ($(window.location.hash+'-section').length) {
-        //take id with name from hash param and scroll there
-        $(window.location.hash+'-section').animatescroll();
-      }
-
-      $('.navigation a').each(function(i, el){
-        $(el).click(function(){
-            $('#'+$(el).data('target')+'-section').animatescroll();
-        });
-      });
-    });
-    </script>
+    <link rel="shortcut icon" href="<?=$_SERVER['REQUEST_URI']?>images/pig.ico" />
   </head>
   <body>

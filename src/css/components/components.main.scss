@@ -83,10 +83,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-header {
-  width: 100%;
-  position: relative;
-  top: -410px;
-  margin-bottom: -410px;
+  // width: 100%;
+  // position: relative;
+  // top: -410px;
+  // margin-bottom: -410px;
   @include mq($from: palm, $until:lap) {
     opacity: .5;
     filter: alpha(opacity=50);
@@ -98,36 +98,102 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.sc-wrapper {
-  padding-top: 20px;
-  border: 20px solid $white;
-  height: 470px;
-  width: 690px;
-  margin: auto;
-}
-.sc-link {
-  position: relative;
-  left: -80px;
-  width: 80px;
-  height: 80px;
-  top: 0px;
+.about_wrapper {
+  padding-top: 55px;
+  img {
+    vertical-align: bottom;
+  }
 }
 
-section[id*="-section"] {
+.about_content {
+  background-color: $lila;
+}
+
+.fb-logo {
+  background: url(../images/facebook_logo2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+.sc-logo {
+  background: url(../images/soundcloud_logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+.navigation__item {
+  border: 1px solid transparent;
+  padding: 4px 8px;
+  &.active {
+    border-color: $white;
+  }
+}
+
+.navigation {
+  background-color: $blue_baby;
+  transition: background-color 500ms linear;
+  z-index: 2;
+  display: inline-block;
+  position: fixed;
+
+  a {
+    transition: color 500ms linear;
+  }
+  .active {
+    transition: border-color 500ms linear;
+  }
+  &.isStuck {
+    background-color: $yellow;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    box-shadow: 0px 0px 6px $grey__dark;
+    a {
+      -webkit-transition: color 500ms linear;
+      -ms-transition: color 500ms linear;
+      color: $blue_baby;
+    }
+    .active {
+      -webkit-transition: border-color 500ms linear;
+      -ms-transition: border-color 500ms linear;
+      border-color: $blue_baby;
+    }
+  }
+}
+
+.tiles {
+  margin: auto;
+  h4 {
+    display: block;
+  }
+  .o-layout__item {
+    // padding: 0 15px 15px 15px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    // border: 1px solid $white;
+  }
+
+}
+
+#about {
+    background: none;
+}
+
+.section {
   background: $lila; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient($blue_baby, $lila); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient($blue_baby, $lila); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient($blue_baby, $lila); /* For Firefox 3.6 to 15 */
   background: linear-gradient($blue_baby, $lila); /* Standard syntax */
-  position: relative;
 }
 
-#programm-section {
-  left: 0;
-  @include background-cover('../images/bg1.jpg');
-}
-
-#ads-section {
+#ads {
   left: 0;
   background: $lila; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient($yellow, $blue_baby, $yellow); /* For Safari 5.1 to 6.0 */
@@ -136,7 +202,7 @@ section[id*="-section"] {
   background: linear-gradient($yellow, $blue_baby, $yellow); /* Standard syntax */
 }
 
-#infos-section {
+#infos {
   left: 0;
   background: $lila; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient($yellow, $blue_baby, $yellow); /* For Safari 5.1 to 6.0 */

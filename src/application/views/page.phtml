@@ -1,30 +1,28 @@
-<div class="wrapper">
-  <div class="outer-content center">
-    <a class="no-deco pt-" href="https://www.eventbrite.de/e/animal-farm-festival-2017-tickets-32212955818" target="_blank">BUY TICKETS</a>
-  </div>
+<div>
   <div class="content">
-    <section id="about-section" class="clear">
-      <div class="navigation p+ mb++ palm-p0 palm-m0">
+    <section id="about" class="section clear">
+      <div class="navigation pt palm-p0 palm-m0 1/1" style="position: fixed; top: 0px;">
         <?include_once( dirname( __FILE__ ) . '/navigation.phtml' );?>
       </div>
-
       <?include_once( dirname( __FILE__ ) . '/pages/about.phtml' );?>
-      <div class="clear">&nbsp;</div>
     </section>
-    <section id="lineup-section" class="clear pt+">
-      <?include( dirname( __FILE__ ) . '/pages/lineup_ltr.phtml' );?>
-    </section>
-    <section id="ads-section" class="clear pv++">
-      <?include_once( dirname( __FILE__ ) . '/pages/ads.phtml' );?>
-    </section>
-    <section id="news-section" class="clear pt+">
+    <section id="news" class="section clear pv+">
       <?include( dirname( __FILE__ ) . '/pages/news.phtml' );?>
     </section>
-    <!--<section id="lineup-section" class="clear pt+">
-      <?#include( dirname( __FILE__ ) . '/pages/lineup_rtl.phtml' );?>
-    </section>-->
-    <section id="infos-section" class="clear pt+ relative">
+    <section id="ads" class="section clear pv++">
+      <?include_once( dirname( __FILE__ ) . '/pages/ads.phtml' );?>
+    </section>
+    <section id="lineup" class="section clear pt+">
+      <?include( dirname( __FILE__ ) . '/pages/lineup_ltr.phtml' );?>
+    </section>
+    <section id="programm" class="section clear pv+">
+      <?include_once( dirname( __FILE__ ) . '/pages/programm.phtml' );?>
+    </section>
+    <section id="infos" class="section clear pv+">
       <?include_once( dirname( __FILE__ ) . '/pages/infos.phtml' );?>
+    </section>
+    <section class="section clear pt+ relative">
+      <?include_once( dirname( __FILE__ ) . '/pages/getinthemood.phtml' );?>
     </section>
   </div>
 </div>

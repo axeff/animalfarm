@@ -1,2 +1,37 @@
+<script src="<?=$_SERVER['REQUEST_URI']?>js/jquery.stickUp.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.navigation').stickUp({
+      parts: {
+        0:'about',
+        1:'news',
+        2:'ads',
+        3:'lineup',
+        4:'programm',
+        5:'infos',
+      },
+      itemClass: 'navigation__item',
+      itemHover: 'active',
+    });
+    if ($(window.location.hash+'').length) {
+      //take id with name from hash param and scroll there
+      $(window.location.hash+'').animatescroll();
+    }
+
+    $('.navigation a').each(function(i, el){
+      $(el).click(function(){
+        event.preventDefault();
+        $('#'+$(el).data('target')+'').animatescroll();
+      });
+    })
+
+    $(document).on('scroll', function() {
+      if ($(document).scrollTop() <= 1) {
+        $('.navigation').removeClass('isStuck');
+      }
+    });
+
+  });
+</script>
 </body>
 </html>

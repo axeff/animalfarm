@@ -1,15 +1,14 @@
 <?
-  $naviLeft = ["about" => "About", "lineup" => "Lineup", "news" => "News"];
-  $naviRight = ["infos" => "Infos", ];#"programm" => "Programm", "tickets" => "Tickets", "contact" => "Kontakt"];
+  $naviLeft = ["about" => "About", "news" => "News", "ads" => "Tickets", "lineup" => "Lineup", "programm" => "Programm", "infos" => "Infos"];//, "kontakt" => "Kontakt", "impressum" => "Impressum"];
+  // $naviRight = ["newsletter" => "Newsletter", "facebook" => "Facebook", "soundcloud" => "Soundcloud"];#"programm" => "Programm","tickets" => "Tickets", "contact" => "Kontakt"];
 ?>
 
-<div class="left">
+<div class="left ml pl-">
   <?foreach ($naviLeft as $key => $value) {?>
-    <a class='mr gamma' data-target='<?=$key?>' href='#<?=$key?>'><?=$value?></a>
+    <a class='mh- navigation__item gamma <?=$key == "about" ? "active" : ""?>' data-target='<?=$key?>' href='#<?=$key?>'><?=$value?></a>
   <?}?>
 </div>
-<div class="right">
-  <?foreach ($naviRight as $key => $value) {?>
-    <a class='ml gamma' data-target='<?=$key?>' href='#<?=$key?>'><?=$value?></a>
-  <?}?>
+<div class="right mr pr -mt">
+    <a class='fb-logo mt-' data-target='<?=$key?>' href='https://www.facebook.com/Animal-Farm-Festival-638619299659271/'></a>
+    <a class='sc-logo mt-' data-target='<?=$key?>' href='https://soundcloud.com/animalfarmfestival'></a>
 </div>

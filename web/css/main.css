@@ -770,82 +770,118 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   width: 100%; }
 
-.logo-header {
-  width: 100%;
-  position: relative;
-  top: -410px;
-  margin-bottom: -410px; }
-  @media (min-width: 20em) and (max-width: 47.99em) {
-    .logo-header {
-      opacity: .5;
-      filter: alpha(opacity=50);
-      position: fixed !important;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      margin: 0; } }
+@media (min-width: 20em) and (max-width: 47.99em) {
+  .logo-header {
+    opacity: .5;
+    filter: alpha(opacity=50);
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin: 0; } }
 
-.sc-wrapper {
-  padding-top: 20px;
-  border: 20px solid #FFFFFF;
-  height: 470px;
-  width: 690px;
+.about_wrapper {
+  padding-top: 55px; }
+  .about_wrapper img {
+    vertical-align: bottom; }
+
+.about_content {
+  background-color: #572580; }
+
+.fb-logo {
+  background: url(../images/facebook_logo2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  display: inline-block; }
+
+.sc-logo {
+  background: url(../images/soundcloud_logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  display: inline-block; }
+
+.navigation__item {
+  border: 1px solid transparent;
+  padding: 4px 8px; }
+  .navigation__item.active {
+    border-color: #FFFFFF; }
+
+.navigation {
+  background-color: #35a6de;
+  transition: background-color 500ms linear;
+  z-index: 2;
+  display: inline-block;
+  position: fixed; }
+  .navigation a {
+    transition: color 500ms linear; }
+  .navigation .active {
+    transition: border-color 500ms linear; }
+  .navigation.isStuck {
+    background-color: #faeba7;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    box-shadow: 0px 0px 6px #333333; }
+    .navigation.isStuck a {
+      -webkit-transition: color 500ms linear;
+      -ms-transition: color 500ms linear;
+      color: #35a6de; }
+    .navigation.isStuck .active {
+      -webkit-transition: border-color 500ms linear;
+      -ms-transition: border-color 500ms linear;
+      border-color: #35a6de; }
+
+.tiles {
   margin: auto; }
+  .tiles h4 {
+    display: block; }
+  .tiles .o-layout__item {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; }
 
-.sc-link {
-  position: relative;
-  left: -80px;
-  width: 80px;
-  height: 80px;
-  top: 0px; }
+#about {
+  background: none; }
 
-section[id*="-section"] {
-  background: #6e237d;
+.section {
+  background: #572580;
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#2ea7e8, #6e237d);
+  background: -webkit-linear-gradient(#35a6de, #572580);
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#2ea7e8, #6e237d);
+  background: -o-linear-gradient(#35a6de, #572580);
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#2ea7e8, #6e237d);
+  background: -moz-linear-gradient(#35a6de, #572580);
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#2ea7e8, #6e237d);
-  /* Standard syntax */
-  position: relative; }
-
-#programm-section {
-  left: 0; }
-  @media (min-width: 48em) and (max-width: 187.49em) {
-    #programm-section {
-      background: url("../images/bg1.jpg") no-repeat center center;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover; } }
-
-#ads-section {
-  left: 0;
-  background: #6e237d;
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#faeba7, #2ea7e8, #faeba7);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#faeba7, #2ea7e8, #faeba7);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#faeba7, #2ea7e8, #faeba7);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#faeba7, #2ea7e8, #faeba7);
+  background: linear-gradient(#35a6de, #572580);
   /* Standard syntax */ }
 
-#infos-section {
+#ads {
   left: 0;
-  background: #6e237d;
+  background: #572580;
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#faeba7, #2ea7e8, #faeba7);
+  background: -webkit-linear-gradient(#faeba7, #35a6de, #faeba7);
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#faeba7, #2ea7e8, #faeba7);
+  background: -o-linear-gradient(#faeba7, #35a6de, #faeba7);
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#faeba7, #2ea7e8, #faeba7);
+  background: -moz-linear-gradient(#faeba7, #35a6de, #faeba7);
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#faeba7, #2ea7e8, #faeba7);
+  background: linear-gradient(#faeba7, #35a6de, #faeba7);
+  /* Standard syntax */ }
+
+#infos {
+  left: 0;
+  background: #572580;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#faeba7, #35a6de, #faeba7);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#faeba7, #35a6de, #faeba7);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#faeba7, #35a6de, #faeba7);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#faeba7, #35a6de, #faeba7);
   /* Standard syntax */
   z-index: 0; }
 
@@ -1735,6 +1771,15 @@ section[id*="-section"] {
 @media screen and (min-width: 64em) {
   .desk-hide {
     display: none; } }
+.hide {
+  display: none; }
+
+.inline {
+  display: inline; }
+
+.block {
+  display: block; }
+
 /*------------------------------------*    #WIDTHS
 \*------------------------------------*/
 /**
