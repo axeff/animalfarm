@@ -1,7 +1,7 @@
 <div>
   <div class="content">
     <section id="about" class="section clear">
-      <div class="navigation pt palm-p0 palm-m0 1/1" style="position: fixed; top: 0px;">
+      <div class="navigation pt palm-p0 palm-m0 1/1 stuckMenu isStuck" style="position: fixed; top: 0px;">
         <?include_once( dirname( __FILE__ ) . '/navigation.phtml' );?>
       </div>
       <?include_once( dirname( __FILE__ ) . '/pages/about.phtml' );?>
@@ -12,7 +12,7 @@
     <section id="ads" class="section clear pv++">
       <?include_once( dirname( __FILE__ ) . '/pages/ads.phtml' );?>
     </section>
-    <section id="lineup" class="section clear pt+">
+    <section id="lineup" class="section clear pv++">
       <?include( dirname( __FILE__ ) . '/pages/lineup_ltr.phtml' );?>
     </section>
     <section id="programm" class="section clear pv+">
@@ -21,7 +21,7 @@
     <section id="infos" class="section clear pv+">
       <?include_once( dirname( __FILE__ ) . '/pages/infos.phtml' );?>
     </section>
-    <section class="section clear pt+ relative">
+    <section id="getinthemood" class="section clear pt+ relative">
       <?include_once( dirname( __FILE__ ) . '/pages/getinthemood.phtml' );?>
     </section>
   </div>

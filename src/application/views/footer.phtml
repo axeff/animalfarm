@@ -25,6 +25,10 @@
       });
     })
 
+    if ($(document).scrollTop() <= 1) {
+      $('.navigation').removeClass('isStuck');
+    }
+
     $(document).on('scroll', function() {
       if ($(document).scrollTop() <= 1) {
         $('.navigation').removeClass('isStuck');
