@@ -702,6 +702,83 @@ h6 {
     direction: ltr;
     text-align: left; }
 
+/* ==========================================================================
+   #PACK
+   ========================================================================== */
+/**
+ * The pack object simply causes any number of elements pack up horizontally to
+ * automatically fill an equal, fluid width of their parent.
+ *
+ * 1. Fill all available space.
+ * 2. Remove any leftover styling from lists.
+ * 3. Cause children to be automatically equally sized.
+ */
+.o-pack {
+  width: 100%;
+  /* [1] */
+  margin-left: 0;
+  /* [2] */
+  display: table;
+  table-layout: fixed;
+  /* [3] */ }
+
+/**
+ * 1. Cause children to adopt table-like structure.
+ */
+.o-pack__item {
+  display: table-cell;
+  /* [1] */
+  /* Vertical alignment variants.
+     ====================================================================== */ }
+  .o-pack--middle > .o-pack__item {
+    vertical-align: middle; }
+  .o-pack--bottom > .o-pack__item {
+    vertical-align: bottom; }
+
+/* Unequal-width items.
+   ========================================================================== */
+.o-pack--auto {
+  table-layout: auto; }
+
+/* Size variants.
+   ========================================================================== */
+.o-pack--tiny {
+  border-spacing: 6px; }
+
+.o-pack--small {
+  border-spacing: 12px; }
+
+.o-pack--large {
+  border-spacing: 48px; }
+
+.o-pack--huge {
+  border-spacing: 96px; }
+
+/* Reversed order packs
+   ========================================================================== */
+.o-pack--rev {
+  direction: rtl; }
+  .o-pack--rev > .o-pack__item {
+    direction: ltr; }
+
+.colors-1 {
+  background-color: #35a6de; }
+
+.colors-2 {
+  background-color: #547eb8; }
+
+.colors-3 {
+  background-color: #89d0d6; }
+
+.colors-4 {
+  background-color: #572580; }
+
+.colors-5 {
+  background-color: #faeba7; }
+
+.colors-6 {
+  background-color: #333333; }
+
 body {
   color: #FFFFFF;
   height: 100%;
@@ -838,7 +915,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: auto; }
   .tiles h4 {
     display: block; }
-  .tiles .o-layout__item {
+  .tiles .o-pack__item {
+    padding: 0 15px 15px 15px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box; }
