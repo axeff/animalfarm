@@ -843,6 +843,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .about_wrapper {
   padding-top: 55px; }
+  @media (min-width: 20em) and (max-width: 47.99em) {
+    .about_wrapper {
+      padding-top: 26px; } }
   .about_wrapper img {
     vertical-align: bottom; }
 
@@ -870,6 +873,12 @@ h1, h2, h3, h4, h5, h6 {
   padding: 4px 8px; }
   .navigation__item.active {
     border-color: #FFFFFF; }
+  @media (min-width: 20em) and (max-width: 47.99em) {
+    .navigation__item {
+      display: inline;
+      font-size: 1em !important;
+      padding: 0;
+      margin: 0 5px !important; } }
 
 .navigation {
   background-color: #35a6de;
@@ -877,6 +886,9 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 2;
   display: inline-block;
   position: fixed; }
+  .navigation.stuckMenu {
+    position: fixed !important;
+    top: 0px !important; }
   .navigation a {
     transition: color 500ms linear; }
   .navigation .active {
@@ -918,13 +930,16 @@ h1, h2, h3, h4, h5, h6 {
   .border h3, .border h4 {
     margin: 0 auto;
     background-color: #35a6de;
-    display: inline-block;
+    display: inline-flex;
     position: absolute;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     /* IE 9 */
     -webkit-transform: translate(-50%, -50%);
     /* Chrome, Safari, Opera */ }
+    @media (min-width: 20em) and (max-width: 47.99em) {
+      .border h3 > span, .border h4 > span {
+        border: 6px solid #FFFFFF !important; } }
 
 #about {
   background: none; }
@@ -955,10 +970,6 @@ h1, h2, h3, h4, h5, h6 {
   /* Standard syntax */
   z-index: 0; }
 
-@media (min-width: 20em) and (max-width: 47.99em) {
-  #lineup .o-pack__item {
-    display: block; } }
-
 #programm, #ads {
   background: #5977c2;
   /* For browsers that do not support gradients */
@@ -988,7 +999,9 @@ h1, h2, h3, h4, h5, h6 {
     height: 450px;
     padding: 20px;
     border: 12px solid #FFFFFF;
-    margin: auto; }
+    width: 75%;
+    max-width: 60em;
+    margin: 0 auto; }
 
 .alpha {
   font-size: 36px;
@@ -2049,7 +2062,8 @@ h1, h2, h3, h4, h5, h6 {
                  * Whole.
                  */
   .palm-one-whole {
-    width: 100% !important; }
+    width: 100% !important;
+    display: inline-block; }
 
   /**
                  * Halves.

@@ -9,10 +9,10 @@
   $artists = new Artists();
 ?>
 <div class="o-pack o-pack--auto o-pack--middle">
-  <div class="o-pack__item palm-one-whole pl+">
-    <h3 class="m0 clear palm-p0 palm-m0 left"><span>LINEUP</span></h3>
+  <div class="o-pack__item palm-one-whole pl+ palm-pl-">
+    <h3 class="m0 clear palm-p0 palm-m0 left palm-one-whole"><span>LINEUP</span></h3>
   </div><!--
-  --><div class="o-pack__item palm-one-whole">
+  --><div class="o-pack__item palm-hide">
       <table>
         <tr>
         <?
@@ -33,8 +33,19 @@
         ?>
         </tr>
       </table>
-  </div>
-  <div class="o-pack__item palm-one-whole">
+  </div><!--
+  --><div class="o-pack__item palm-one-whole hide palm-show o-layout ph">
+  <?
+    foreach ($artists->getAll() as $artist) {
+      $name = $artist['name'];
+      if (count($artist['link'])){
+        $name = '<a target="_blank" class="no-deco" href="'.$artist['link'].'">'.$name.'</a>';
+      }
+      echo "<div class='pv- font__amatic text--center delta ph o-layout__item 1/2'>".$name."</div>";
+    }
+  ?>
+  </div><!--
+  --><div class="o-pack__item palm-one-whole palm-pl-">
     <div class="vertical bold mr gamma">MORE TBA.</div>
   </div>
 </div>

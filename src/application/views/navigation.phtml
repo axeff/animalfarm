@@ -3,12 +3,12 @@
   // $naviRight = ["newsletter" => "Newsletter", "facebook" => "Facebook", "soundcloud" => "Soundcloud"];#"programm" => "Programm","tickets" => "Tickets", "contact" => "Kontakt"];
 ?>
 
-<div class="left ml pl-">
+<div class="left ml pl- palm-pl0 palm-m0">
   <?foreach ($naviLeft as $key => $value) {?>
-    <a class='mh- navigation__item gamma <?=$key == "about" ? "active" : ""?>' data-target='<?=$key?>' href='#<?=$key?>'><?=$value?></a>
+    <a class='desk-mh- lap-mh- navigation__item gamma <?=$key == "about" ? "active" : ""?>' data-target='<?=$key?>' href='#<?=$key?>'><?=$value?></a>
   <?}?>
 </div>
-<div class="right mr pr -mt">
+<div class="right mr pr -mt palm-hide">
     <a class='fb-logo mt-' data-target='<?=$key?>' target='_blank' href='https://www.facebook.com/Animal-Farm-Festival-638619299659271/'></a>
     <a class='sc-logo mt-' data-target='<?=$key?>' target='_blank' href='https://soundcloud.com/animalfarmfestival'></a>
 </div>
