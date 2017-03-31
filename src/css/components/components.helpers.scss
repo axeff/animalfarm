@@ -36,10 +36,18 @@
 .bold {
   font-weight: 900;
 }
-.blue__dark {
+.blue__dark, .blue__dark > * {
   color: $blue_dark;
   border-color: $blue_dark;
 }
+
+.bg--turquoise {
+  background-color: $turquoise;
+  &>* {
+    background-color: $turquoise!important;
+  }
+}
+
 /*------------------------------------*    #HIDE
 \*------------------------------------*/
 /**

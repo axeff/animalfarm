@@ -3,6 +3,7 @@ body {
   height: 100%;
   width: 100%;
   font-family: 'Lato', sans-serif;
+  font-size: 1.1em;
 }
 
 a, a:visited {
@@ -14,12 +15,14 @@ a, a:visited {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  border: 6px solid $white;
   font-weight: 900;
-  display: inline;
-  padding: 4px 8px;
-  @include mq($from: palm, $until:lap) {
-    border: 0;
+  text-transform: uppercase;
+  > span {
+    border: 6px solid $white;
+    padding: 4px 8px;
+    @include mq($from: palm, $until:lap) {
+      border: 0;
+    }
   }
 }
 
@@ -180,7 +183,27 @@ h1, h2, h3, h4, h5, h6 {
       display: block;
     }
   }
+  ul {
+    padding-left: 0;
+    li {
+      text-align: left;
+      list-style: none;
+    }
+  }
 
+}
+
+.border {
+  border: 6px solid $white;
+  h3, h4 {
+    margin: 0 auto;
+    background-color: $blue_baby;
+    display: inline-block;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%); /* IE 9 */
+    -webkit-transform: translate(-50%,-50%); /* Chrome, Safari, Opera */
+  }
 }
 
 #about {
@@ -195,15 +218,6 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient($blue_baby, $lila); /* Standard syntax */
 }
 
-#ads {
-  left: 0;
-  background: $lila; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient($yellow, $blue_baby, $yellow); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient($yellow, $blue_baby, $yellow); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient($yellow, $blue_baby, $yellow); /* For Firefox 3.6 to 15 */
-  background: linear-gradient($yellow, $blue_baby, $yellow); /* Standard syntax */
-}
-
 #infos {
   left: 0;
   background: $lila; /* For browsers that do not support gradients */
@@ -214,26 +228,20 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 0;
 }
 
-#programm {
+#lineup {
+  .o-pack__item {
+    @include mq($from: palm, $until:lap) {
+      display: block;
+    }
+  }
+}
+
+#programm, #ads {
   background: $blue_mid; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient($blue_baby, $blue_mid); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient($blue_baby, $blue_mid); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient($blue_baby, $blue_mid); /* For Firefox 3.6 to 15 */
   background: linear-gradient($blue_baby, $blue_mid); /* Standard syntax */
-
-  .border {
-    border: 5px solid $white;
-    h3 {
-      margin: 0 auto;
-      background-color: $blue_baby;
-      display: inline-block;
-      position: absolute;
-      transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%); /* IE 9 */
-      -webkit-transform: translate(-50%,-50%); /* Chrome, Safari, Opera */
-
-    }
-  }
 }
 
 #getinthemood {
@@ -243,4 +251,12 @@ h1, h2, h3, h4, h5, h6 {
   background: -moz-linear-gradient($yellow, $blue_mid, $yellow); /* For Firefox 3.6 to 15 */
   background: linear-gradient($yellow, $blue_mid, $yellow); /* Standard syntax */
   z-index: 0;
+
+  .sc-wrapper {
+    width: 670px;
+    height: 450px;
+    padding: 20px;
+    border: 12px solid $white;
+    margin: auto;
+  }
 }

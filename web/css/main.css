@@ -761,29 +761,12 @@ h6 {
   .o-pack--rev > .o-pack__item {
     direction: ltr; }
 
-.colors-1 {
-  background-color: #35a6de; }
-
-.colors-2 {
-  background-color: #547eb8; }
-
-.colors-3 {
-  background-color: #89d0d6; }
-
-.colors-4 {
-  background-color: #572580; }
-
-.colors-5 {
-  background-color: #faeba7; }
-
-.colors-6 {
-  background-color: #333333; }
-
 body {
   color: #FFFFFF;
   height: 100%;
   width: 100%;
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1em; }
 
 a, a:visited {
   color: #FFFFFF; }
@@ -792,13 +775,14 @@ a, a:visited {
       color: inherit; } }
 
 h1, h2, h3, h4, h5, h6 {
-  border: 6px solid #FFFFFF;
   font-weight: 900;
-  display: inline;
-  padding: 4px 8px; }
-  @media (min-width: 20em) and (max-width: 47.99em) {
-    h1, h2, h3, h4, h5, h6 {
-      border: 0; } }
+  text-transform: uppercase; }
+  h1 > span, h2 > span, h3 > span, h4 > span, h5 > span, h6 > span {
+    border: 6px solid #FFFFFF;
+    padding: 4px 8px; }
+    @media (min-width: 20em) and (max-width: 47.99em) {
+      h1 > span, h2 > span, h3 > span, h4 > span, h5 > span, h6 > span {
+        border: 0; } }
 
 .font__amatic, a, a:visited {
   font-family: 'Amatic SC', cursive; }
@@ -923,6 +907,24 @@ h1, h2, h3, h4, h5, h6 {
     @media (min-width: 20em) and (max-width: 47.99em) {
       .tiles .o-pack__item {
         display: block; } }
+  .tiles ul {
+    padding-left: 0; }
+    .tiles ul li {
+      text-align: left;
+      list-style: none; }
+
+.border {
+  border: 6px solid #FFFFFF; }
+  .border h3, .border h4 {
+    margin: 0 auto;
+    background-color: #35a6de;
+    display: inline-block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    /* IE 9 */
+    -webkit-transform: translate(-50%, -50%);
+    /* Chrome, Safari, Opera */ }
 
 #about {
   background: none; }
@@ -939,19 +941,6 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(#35a6de, #572580);
   /* Standard syntax */ }
 
-#ads {
-  left: 0;
-  background: #572580;
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#faeba7, #35a6de, #faeba7);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#faeba7, #35a6de, #faeba7);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#faeba7, #35a6de, #faeba7);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#faeba7, #35a6de, #faeba7);
-  /* Standard syntax */ }
-
 #infos {
   left: 0;
   background: #572580;
@@ -966,7 +955,11 @@ h1, h2, h3, h4, h5, h6 {
   /* Standard syntax */
   z-index: 0; }
 
-#programm {
+@media (min-width: 20em) and (max-width: 47.99em) {
+  #lineup .o-pack__item {
+    display: block; } }
+
+#programm, #ads {
   background: #5977c2;
   /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#35a6de, #5977c2);
@@ -977,18 +970,6 @@ h1, h2, h3, h4, h5, h6 {
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(#35a6de, #5977c2);
   /* Standard syntax */ }
-  #programm .border {
-    border: 5px solid #FFFFFF; }
-    #programm .border h3 {
-      margin: 0 auto;
-      background-color: #35a6de;
-      display: inline-block;
-      position: absolute;
-      transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      /* IE 9 */
-      -webkit-transform: translate(-50%, -50%);
-      /* Chrome, Safari, Opera */ }
 
 #getinthemood {
   background: #5977c2;
@@ -1002,6 +983,12 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(#faeba7, #5977c2, #faeba7);
   /* Standard syntax */
   z-index: 0; }
+  #getinthemood .sc-wrapper {
+    width: 670px;
+    height: 450px;
+    padding: 20px;
+    border: 12px solid #FFFFFF;
+    margin: auto; }
 
 .alpha {
   font-size: 36px;
@@ -1868,9 +1855,14 @@ h1, h2, h3, h4, h5, h6 {
 .bold {
   font-weight: 900; }
 
-.blue__dark {
+.blue__dark, .blue__dark > * {
   color: #547eb8;
   border-color: #547eb8; }
+
+.bg--turquoise {
+  background-color: #89d0d6; }
+  .bg--turquoise > * {
+    background-color: #89d0d6 !important; }
 
 /*------------------------------------*    #HIDE
 \*------------------------------------*/
