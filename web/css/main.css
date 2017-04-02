@@ -922,7 +922,6 @@ h1, h2, h3, h4, h5, h6 {
   .tiles ul {
     padding-left: 0; }
     .tiles ul li {
-      text-align: left;
       list-style: none; }
 
 .border {
@@ -937,9 +936,36 @@ h1, h2, h3, h4, h5, h6 {
     /* IE 9 */
     -webkit-transform: translate(-50%, -50%);
     /* Chrome, Safari, Opera */ }
+    .border h3.lila, .border h4.lila {
+      background-color: #572580; }
+    .border h3.yellow-to-blue, .border h4.yellow-to-blue {
+      background: #cfdbb4;
+      /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(#cfdbb4, #a1ccc0);
+      /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(#cfdbb4, #a1ccc0);
+      /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(#cfdbb4, #a1ccc0);
+      /* For Firefox 3.6 to 15 */
+      background: linear-gradient(#cfdbb4, #a1ccc0);
+      /* Standard syntax */ }
+    .border h3.blue2-to-blue3, .border h4.blue2-to-blue3 {
+      background: #3f86c4;
+      /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(#3f86c4, #4178ba);
+      /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(#3f86c4, #4178ba);
+      /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(#3f86c4, #4178ba);
+      /* For Firefox 3.6 to 15 */
+      background: linear-gradient(#3f86c4, #4178ba);
+      /* Standard syntax */ }
     @media (min-width: 20em) and (max-width: 47.99em) {
       .border h3 > span, .border h4 > span {
         border: 6px solid #FFFFFF !important; } }
+
+#mc_embed_signup {
+  background-color: inherit !important; }
 
 #about {
   background: none; }
@@ -956,7 +982,7 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(#35a6de, #572580);
   /* Standard syntax */ }
 
-#infos {
+#programm {
   left: 0;
   background: #572580;
   /* For browsers that do not support gradients */
@@ -970,7 +996,7 @@ h1, h2, h3, h4, h5, h6 {
   /* Standard syntax */
   z-index: 0; }
 
-#programm, #ads {
+#infos, #ads {
   background: #5977c2;
   /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#35a6de, #5977c2);
@@ -994,14 +1020,15 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(#faeba7, #5977c2, #faeba7);
   /* Standard syntax */
   z-index: 0; }
-  #getinthemood .sc-wrapper {
-    width: 670px;
-    height: 450px;
-    padding: 20px;
-    border: 12px solid #FFFFFF;
-    width: 75%;
-    max-width: 60em;
-    margin: 0 auto; }
+
+.sc-wrapper {
+  width: 670px;
+  height: 450px;
+  padding: 20px;
+  border: 12px solid #FFFFFF;
+  width: 75%;
+  max-width: 60em;
+  margin: 0 auto; }
 
 .alpha {
   font-size: 36px;

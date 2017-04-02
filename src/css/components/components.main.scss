@@ -201,7 +201,6 @@ h1, h2, h3, h4, h5, h6 {
   ul {
     padding-left: 0;
     li {
-      text-align: left;
       list-style: none;
     }
   }
@@ -213,6 +212,23 @@ h1, h2, h3, h4, h5, h6 {
   h3, h4 {
     margin: 0 auto;
     background-color: $blue_baby;
+    &.lila {
+      background-color: $lila;
+    }
+    &.yellow-to-blue {
+      background: $yellow2; /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient($yellow2, $yellow3); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient($yellow2, $yellow3); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient($yellow2, $yellow3); /* For Firefox 3.6 to 15 */
+      background: linear-gradient($yellow2, $yellow3); /* Standard syntax */
+    }
+    &.blue2-to-blue3 {
+      background: $blue_mid2; /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient($blue_mid2, $blue_mid3); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient($blue_mid2, $blue_mid3); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient($blue_mid2, $blue_mid3); /* For Firefox 3.6 to 15 */
+      background: linear-gradient($blue_mid2, $blue_mid3); /* Standard syntax */
+    }
     display: inline-flex;
     position: absolute;
     transform: translate(-50%,-50%);
@@ -224,6 +240,10 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
   }
+}
+
+#mc_embed_signup {
+  background-color: inherit!important;
 }
 
 #about {
@@ -238,7 +258,7 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient($blue_baby, $lila); /* Standard syntax */
 }
 
-#infos {
+#programm {
   left: 0;
   background: $lila; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient($yellow, $blue_baby, $yellow); /* For Safari 5.1 to 6.0 */
@@ -248,7 +268,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 0;
 }
 
-#programm, #ads {
+#infos, #ads {
   background: $blue_mid; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient($blue_baby, $blue_mid); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient($blue_baby, $blue_mid); /* For Opera 11.1 to 12.0 */
@@ -263,14 +283,14 @@ h1, h2, h3, h4, h5, h6 {
   background: -moz-linear-gradient($yellow, $blue_mid, $yellow); /* For Firefox 3.6 to 15 */
   background: linear-gradient($yellow, $blue_mid, $yellow); /* Standard syntax */
   z-index: 0;
+}
 
-  .sc-wrapper {
-    width: 670px;
-    height: 450px;
-    padding: 20px;
-    border: 12px solid $white;
-    width: 75%;
-    max-width: 60em;
-    margin: 0 auto;
-  }
+.sc-wrapper {
+  width: 670px;
+  height: 450px;
+  padding: 20px;
+  border: 12px solid $white;
+  width: 75%;
+  max-width: 60em;
+  margin: 0 auto;
 }

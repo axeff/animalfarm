@@ -1,11 +1,11 @@
 <?
-  $naviLeft = ["about" => "About", "news" => "News", "ads" => "Tickets", "lineup" => "Lineup", "infos" => "Infos", "programm" => "Programm"];//, "kontakt" => "Kontakt", "impressum" => "Impressum"];
+  $naviLeft = ["about" => "About", "news" => "News", "ads" => "Tickets", "lineup" => "Lineup", "programm" => "Programm", "newsletter" => "Newsletter", "infos" => "Infos"];//, "kontakt" => "Kontakt", "impressum" => "Impressum"];
   // $naviRight = ["newsletter" => "Newsletter", "facebook" => "Facebook", "soundcloud" => "Soundcloud"];#"programm" => "Programm","tickets" => "Tickets", "contact" => "Kontakt"];
 ?>
 
 <div class="left ml pl- palm-pl0 palm-m0">
   <?foreach ($naviLeft as $key => $value) {?>
-    <a class='desk-mh- lap-mh- navigation__item gamma <?=$key == "about" ? "active" : ""?>' data-target='<?=$key?>' href='#<?=$key?>'><?=$value?></a>
+    <a class='desk-mh- lap-mh- navigation__item gamma <?=$key == "about" ? "active" : ""?> <?=$key == "newsletter" ? "palm-hide" : ""?>' data-target='<?=$key?>' href='#<?=$key?>'><?=$value?></a>
   <?}?>
   <a class='desk-mh- lap-mh- gamma palm-hide' href='mailto:info@animalfarm-festival.de'>Kontakt</a>
 </div>
