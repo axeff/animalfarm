@@ -48,6 +48,12 @@
   }
 }
 
+@include mq($from: palm, $until:lap) {
+  .palm-mb32 {
+    margin-bottom: 32px!important;
+  }
+}
+
 /*------------------------------------*    #HIDE
 \*------------------------------------*/
 /**

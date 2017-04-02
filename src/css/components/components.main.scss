@@ -209,6 +209,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .border {
   border: 6px solid $white;
+  @include mq($from: palm, $until:lap) {
+    box-sizing: border-box;
+    width: 100%!important;
+    margin: 0!important;
+  }
+
   h3, h4 {
     margin: 0 auto;
     background-color: $blue_baby;
@@ -293,4 +299,9 @@ h1, h2, h3, h4, h5, h6 {
   width: 75%;
   max-width: 60em;
   margin: 0 auto;
+  @include mq($from: palm, $until:lap) {
+    margin: 0px !important;
+    box-sizing: border-box;
+    width: 100%!important;
+  }
 }

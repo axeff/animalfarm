@@ -54,7 +54,7 @@ class Artists
       ],
       [
         'name' => 'Manel Cluny',
-        'link' => 'soundcloud.com/manelcluny',
+        'link' => 'https://soundcloud.com/manelcluny',
       ],
       [
         'name' => 'Marc Poppcke',
@@ -98,7 +98,7 @@ class Artists
       ],
       [
         'name' => 'Rusky',
-        'link' => 'soundcloud.com/rusky',
+        'link' => 'http://soundcloud.com/rusky',
       ],
       [
         'name' => 'Saar:erer',
