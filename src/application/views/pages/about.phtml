@@ -1,6 +1,11 @@
 <div class="hide"></div>
 <div class="about_wrapper">
- <img src="images/animalfarm_header.jpg" class="1/1"/>
+ <picture>
+   <source media="(max-width: 320px)" srcset="images/animalfarm_header_320.jpg">
+   <source media="(max-width: 768px)" srcset="images/animalfarm_header_768.jpg">
+   <!---Fallback--->
+   <img src="images/animalfarm_header_1900.jpg" alt="Animal Farm Header" class="1/1"/>
+</picture>
 </div>
 <div class="about_content pt+ text--center pv++">
   <div class="border mh+ palm-m0">
