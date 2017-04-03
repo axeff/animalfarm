@@ -1916,7 +1916,10 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 20em) and (max-width: 47.99em) {
   .palm-mb32 {
-    margin-bottom: 32px !important; } }
+    margin-bottom: 32px !important; }
+
+  .palm-text--center {
+    text-align: center !important; } }
 /*------------------------------------*    #HIDE
 \*------------------------------------*/
 /**
