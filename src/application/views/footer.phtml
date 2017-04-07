@@ -4,7 +4,7 @@
 <script>
   $(document).ready(function() {
     $('.navigation').stickUp({
-      parts: ['about','news','ads','lineup','infos','programm', 'newsletter'],
+      parts: ['about','news','ads','lineup','programm','newsletter','infos'],
       itemClass: 'navigation__item',
       itemHover: 'active',
     });
@@ -16,7 +16,11 @@
     $('.navigation a.navigation__item').each(function(i, el){
       $(el).click(function(){
         event.preventDefault();
-        $('#'+$(el).data('target')+'').animatescroll();
+        $('#'+$(el).data('target')+'').animatescroll({
+          onScrollEnd: function(){
+            location.hash="#"+$(el).data('target');
+          }
+        });
       });
     })
 
