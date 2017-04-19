@@ -14,15 +14,25 @@ a, a:visited {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
   font-weight: 900;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  overflow: hidden;
   > span {
     border: 6px solid $white;
     padding: 4px 8px;
     @include mq($from: palm, $until:lap) {
       border: 0;
     }
+  }
+}
+
+.grey__dark {
+  color: $grey__dark;
+  a {
+    @extend .font__lato;
+    color: $grey__dark;
   }
 }
 
@@ -264,31 +274,13 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient($blue_baby, $lila); /* Standard syntax */
 }
 
-#programm {
-  left: 0;
-  background: $lila; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient($yellow, $blue_baby, $yellow); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient($yellow, $blue_baby, $yellow); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient($yellow, $blue_baby, $yellow); /* For Firefox 3.6 to 15 */
-  background: linear-gradient($yellow, $blue_baby, $yellow); /* Standard syntax */
-  z-index: 0;
-}
 
-#infos, #ads {
+.section {
   background: $blue_mid; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient($blue_baby, $blue_mid); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient($blue_baby, $blue_mid); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient($blue_baby, $blue_mid); /* For Firefox 3.6 to 15 */
   background: linear-gradient($blue_baby, $blue_mid); /* Standard syntax */
-}
-
-#getinthemood {
-  background: $blue_mid; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient($yellow, $blue_mid, $yellow); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient($yellow, $blue_mid, $yellow); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient($yellow, $blue_mid, $yellow); /* For Firefox 3.6 to 15 */
-  background: linear-gradient($yellow, $blue_mid, $yellow); /* Standard syntax */
-  z-index: 0;
 }
 
 .sc-wrapper {
@@ -303,5 +295,6 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0px !important;
     box-sizing: border-box;
     width: 100%!important;
+    border: 6px solid $white;
   }
 }

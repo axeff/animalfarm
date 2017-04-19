@@ -774,20 +774,27 @@ a, a:visited {
     a, a:visited {
       color: inherit; } }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
   font-weight: 900;
-  text-transform: uppercase; }
-  h1 > span, h2 > span, h3 > span, h4 > span, h5 > span, h6 > span {
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+  h1 > span, h2 > span, h3 > span, h4 > span {
     border: 6px solid #FFFFFF;
     padding: 4px 8px; }
     @media (min-width: 20em) and (max-width: 47.99em) {
-      h1 > span, h2 > span, h3 > span, h4 > span, h5 > span, h6 > span {
+      h1 > span, h2 > span, h3 > span, h4 > span {
         border: 0; } }
+
+.grey__dark {
+  color: #333333; }
+  .grey__dark a {
+    color: #333333; }
 
 .font__amatic, a, a:visited {
   font-family: 'Amatic SC', cursive; }
 
-.font__lato, .outer-content a {
+.font__lato, .grey__dark a, .outer-content a {
   font-family: 'Lato', sans-serif; }
 
 .wrapper {
@@ -987,21 +994,7 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(#35a6de, #572580);
   /* Standard syntax */ }
 
-#programm {
-  left: 0;
-  background: #572580;
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#faeba7, #35a6de, #faeba7);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#faeba7, #35a6de, #faeba7);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#faeba7, #35a6de, #faeba7);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#faeba7, #35a6de, #faeba7);
-  /* Standard syntax */
-  z-index: 0; }
-
-#infos, #ads {
+.section {
   background: #5977c2;
   /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#35a6de, #5977c2);
@@ -1012,19 +1005,6 @@ h1, h2, h3, h4, h5, h6 {
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(#35a6de, #5977c2);
   /* Standard syntax */ }
-
-#getinthemood {
-  background: #5977c2;
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#faeba7, #5977c2, #faeba7);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#faeba7, #5977c2, #faeba7);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#faeba7, #5977c2, #faeba7);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#faeba7, #5977c2, #faeba7);
-  /* Standard syntax */
-  z-index: 0; }
 
 .sc-wrapper {
   width: 670px;
@@ -1038,7 +1018,8 @@ h1, h2, h3, h4, h5, h6 {
     .sc-wrapper {
       margin: 0px !important;
       box-sizing: border-box;
-      width: 100% !important; } }
+      width: 100% !important;
+      border: 6px solid #FFFFFF; } }
 
 .alpha {
   font-size: 36px;

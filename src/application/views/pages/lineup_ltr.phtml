@@ -10,7 +10,7 @@
 ?>
 <div class="o-pack o-pack--auto o-pack--middle">
   <div class="o-pack__item palm-one-whole pl+ palm-pl0 text--center">
-    <h3 class="m0 clear palm-p0 palm-m0 left palm-one-whole"><span>LINEUP</span></h3>
+    <h3 class="m0 pv clear palm-p0 palm-m0 left palm-one-whole"><span>LINEUP</span></h3>
   </div><!--
   --><div class="o-pack__item palm-hide">
       <table class="1/1">
@@ -23,7 +23,7 @@
             if (count($artist['link'])){
               $name = '<a target="_blank" class="no-deco" href="'.$artist['link'].'">'.$name.'</a>';
             }
-            echo "<td class='pv- font__amatic delta ph'>".$name."</td>";
+            echo "<td class='pv- font__amatic gamma ph'>".$name."</td>";
 
             if ($i % 5 == 0) {
               echo '</tr><tr>';
@@ -46,6 +46,6 @@
   ?>
   </div><!--
   --><div class="o-pack__item palm-one-whole palm-pl0 palm-text--center">
-    <div class="vertical bold mr gamma">MORE TBA.</div>
+    <div class="vertical bold mr gamma palm-pt">MORE TBA.</div>
   </div>
 </div>
