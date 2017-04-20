@@ -50,6 +50,12 @@
     });
     $('.about_content').css('margin-top', $('picture').height()+'px');
     $('.about_content img').css('top', '-'+$('picture').height()+'px');
+
+    $(window).scroll(function(){
+      var amount = 57 + (Math.floor($(window).scrollTop()/2));
+      console.log(amount);
+      $('.about_wrapper > picture').css('top', amount+'px');
+    });
     $('.navigation').stickUp({
       parts: ['about','news','ads','lineup','programm','newsletter','infos'],
       itemClass: 'navigation__item',
