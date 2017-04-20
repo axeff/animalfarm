@@ -857,7 +857,8 @@ h1, h2, h3, h4 {
     vertical-align: bottom; }
 
 .about_content {
-  background-color: #572580; }
+  background-color: #572580;
+  position: relative; }
 
 .fb-logo {
   background: url(../images/facebook_logo2.png);
@@ -983,18 +984,6 @@ h1, h2, h3, h4 {
   background: none; }
 
 .section {
-  background: #572580;
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#35a6de, #572580);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#35a6de, #572580);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#35a6de, #572580);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#35a6de, #572580);
-  /* Standard syntax */ }
-
-.section {
   background: #5977c2;
   /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#35a6de, #5977c2);
@@ -1004,7 +993,8 @@ h1, h2, h3, h4 {
   background: -moz-linear-gradient(#35a6de, #5977c2);
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(#35a6de, #5977c2);
-  /* Standard syntax */ }
+  /* Standard syntax */
+  position: relative; }
 
 .sc-wrapper {
   width: 670px;

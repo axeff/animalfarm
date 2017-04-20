@@ -42,7 +42,14 @@
 <script src="<?=$_SERVER['REQUEST_URI']?>js/jquery.animatescroll.min.js"></script>
 <script src="<?=$_SERVER['REQUEST_URI']?>js/jquery.stickUp.min.js"></script>
 <script>
+
   $(document).ready(function() {
+    $( window ).resize(function() {
+        $('.about_content').css('margin-top', $('picture').height()+'px');
+        $('.about_content img').css('top', '-'+$('picture').height()+'px');
+    });
+    $('.about_content').css('margin-top', $('picture').height()+'px');
+    $('.about_content img').css('top', '-'+$('picture').height()+'px');
     $('.navigation').stickUp({
       parts: ['about','news','ads','lineup','programm','newsletter','infos'],
       itemClass: 'navigation__item',
