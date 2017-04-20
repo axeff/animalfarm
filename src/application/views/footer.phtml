@@ -52,8 +52,7 @@
     $('.about_content img').css('top', '-'+$('picture').height()+'px');
 
     $(window).scroll(function(){
-      var amount = $('picture').height() + (Math.floor($(window).scrollTop()/2));
-      console.log(amount);
+      var amount = 57 + (Math.floor($(window).scrollTop()/2));
       $('.about_wrapper > picture').css('top', amount+'px');
     });
     $('.navigation').stickUp({
