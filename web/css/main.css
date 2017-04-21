@@ -855,6 +855,11 @@ h1, h2, h3, h4 {
       padding-top: 26px; } }
   .about_wrapper img {
     vertical-align: bottom; }
+  .about_wrapper .falling_stars {
+    transform-origin: 50% 50%;
+    z-index: 1;
+    left: 50%;
+    top: -50px; }
 
 .about_content {
   background-color: #572580;

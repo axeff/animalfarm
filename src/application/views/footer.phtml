@@ -43,17 +43,26 @@
 <script src="<?=$_SERVER['REQUEST_URI']?>js/jquery.stickUp.min.js"></script>
 <script>
 
+  var recalculate = function(){
+    $('.about_content').css('margin-top', $('.picture_header picture img').height()+'px');
+    $('.about_content img').css('top', '-'+$('.picture_header picture img').height()+'px');
+    $('.picture_header').css('top',$('.navigation').innerHeight() + 'px');
+  }
+
   $(document).ready(function() {
     $( window ).resize(function() {
-        $('.about_content').css('margin-top', $('picture').height()+'px');
-        $('.about_content img').css('top', '-'+$('picture').height()+'px');
+        recalculate();
     });
-    $('.about_content').css('margin-top', $('picture').height()+'px');
-    $('.about_content img').css('top', '-'+$('picture').height()+'px');
+    recalculate();
 
     $(window).scroll(function(){
-      var amount = 57 + (Math.floor($(window).scrollTop()/2));
-      $('.about_wrapper > picture').css('top', amount+'px');
+      var amount = (Math.floor($(window).scrollTop()/2));
+      $('.about_wrapper > .picture_header').css('transform', 'translate3d(0,'+amount+'px,0)');
+      if (amount <= 300) {
+        $('.falling_stars.container').css('transform','translateX('+amount+'px) translateY('+(3*amount)+'px)');
+        $('.falling_stars img').css('transform','rotate('+amount+'deg)');
+      }
+
     });
     $('.navigation').stickUp({
       parts: ['about','news','ads','lineup','programm','newsletter','infos'],
