@@ -58,10 +58,10 @@
     $(window).scroll(function(){
       var amount = (Math.floor($(window).scrollTop()/2));
       $('.about_wrapper > .picture_header').css('transform', 'translate3d(0,'+amount+'px,0)');
-      if (amount <= 300) {
+      /*if (amount <= 300) {
         $('.falling_stars.container').css('transform','translateX('+amount+'px) translateY('+(3*amount)+'px)');
         $('.falling_stars img').css('transform','rotate('+amount+'deg)');
-      }
+      }*/
 
     });
     $('.navigation').stickUp({
