@@ -280,13 +280,19 @@ h1, h2, h3, h4 {
   background: -moz-linear-gradient($blue_baby, $blue_mid); /* For Firefox 3.6 to 15 */
   background: linear-gradient($blue_baby, $blue_mid); /* Standard syntax */
   position: relative;
+
+  > div:first-of-type, .float_in_middle {
+      max-width: 900px;
+      margin: 0 auto;
+  }
 }
 
 .sc-wrapper {
   width: 670px;
   height: 450px;
-  padding: 20px;
-  border: 12px solid $white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 6px solid $white;
   width: 75%;
   max-width: 60em;
   margin: 0 auto;

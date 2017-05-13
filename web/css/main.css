@@ -1000,12 +1000,16 @@ h1, h2, h3, h4 {
   background: linear-gradient(#35a6de, #5977c2);
   /* Standard syntax */
   position: relative; }
+  .section > div:first-of-type, .section .float_in_middle {
+    max-width: 900px;
+    margin: 0 auto; }
 
 .sc-wrapper {
   width: 670px;
   height: 450px;
-  padding: 20px;
-  border: 12px solid #FFFFFF;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 6px solid #FFFFFF;
   width: 75%;
   max-width: 60em;
   margin: 0 auto; }
