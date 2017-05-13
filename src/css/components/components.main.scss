@@ -27,8 +27,36 @@ h1, h2, h3, h4 {
       border: 0;
     }
   }
-}
+  &.stars {
+    span {
+      display: inline-block;
+      position: relative;
+      margin: 20px auto;
 
+      &:before,&:after {
+        top: -8px;
+        position: absolute;
+        background: url(../images/stars.png);
+        content: '';
+        width: 100px;
+        height: 49px;
+        background-repeat: no-repeat;
+      }
+
+      &:before {
+        left: -115px;
+        -moz-transform: scale(-1, 1);
+        -webkit-transform: scale(-1, 1);
+        -o-transform: scale(-1, 1);
+        -ms-transform: scale(-1, 1);
+        transform: scale(-1, 1);
+      }
+      &:after {
+        right: -115px;
+      }
+    }
+  }
+}
 .grey__dark {
   color: $grey__dark;
   a {
@@ -53,6 +81,14 @@ h1, h2, h3, h4 {
     -o-background-size: cover;
     background-size: cover;
   }
+}
+
+@mixin gradient($color1, $color2) {
+  background: $color1; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($color1, $color2); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($color1, $color2); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($color1, $color2); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($color1, $color2); /* Standard syntax */
 }
 
 .wrapper {
@@ -129,7 +165,7 @@ h1, h2, h3, h4 {
 }
 
 .about_content {
-  background-color: $lila;
+  @include gradient($lila, $blue_baby);
   position: relative;
 }
 
@@ -240,18 +276,10 @@ h1, h2, h3, h4 {
       background-color: $lila;
     }
     &.yellow-to-blue {
-      background: $yellow2; /* For browsers that do not support gradients */
-      background: -webkit-linear-gradient($yellow2, $yellow3); /* For Safari 5.1 to 6.0 */
-      background: -o-linear-gradient($yellow2, $yellow3); /* For Opera 11.1 to 12.0 */
-      background: -moz-linear-gradient($yellow2, $yellow3); /* For Firefox 3.6 to 15 */
-      background: linear-gradient($yellow2, $yellow3); /* Standard syntax */
+      @include gradient($yellow2, $yellow3);
     }
     &.blue2-to-blue3 {
-      background: $blue_mid2; /* For browsers that do not support gradients */
-      background: -webkit-linear-gradient($blue_mid2, $blue_mid3); /* For Safari 5.1 to 6.0 */
-      background: -o-linear-gradient($blue_mid2, $blue_mid3); /* For Opera 11.1 to 12.0 */
-      background: -moz-linear-gradient($blue_mid2, $blue_mid3); /* For Firefox 3.6 to 15 */
-      background: linear-gradient($blue_mid2, $blue_mid3); /* Standard syntax */
+      @include gradient($blue_mid2, $blue_mid3);
     }
     display: inline-flex;
     position: absolute;
@@ -275,12 +303,25 @@ h1, h2, h3, h4 {
 }
 
 .section {
-  background: $blue_mid; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient($blue_baby, $blue_mid); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient($blue_baby, $blue_mid); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient($blue_baby, $blue_mid); /* For Firefox 3.6 to 15 */
-  background: linear-gradient($blue_baby, $blue_mid); /* Standard syntax */
-  position: relative;
+  @include gradient($lila, $blue_baby);
+
+  &#news {
+    @include gradient($yellow, #1c5294 70%);
+  }
+
+  &#newsletter {
+    @include gradient(#1c5294 30%, $yellow);
+  }
+
+  &#infos {
+    @include gradient($blue_baby, $lila);
+  }
+
+  &#getinthemood {
+    @include gradient($blue_baby, $lila);
+  }
+
+
 
   > div:first-of-type, .float_in_middle {
       max-width: 900px;

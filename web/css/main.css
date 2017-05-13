@@ -786,6 +786,27 @@ h1, h2, h3, h4 {
     @media (min-width: 20em) and (max-width: 47.99em) {
       h1 > span, h2 > span, h3 > span, h4 > span {
         border: 0; } }
+  h1.stars span, h2.stars span, h3.stars span, h4.stars span {
+    display: inline-block;
+    position: relative;
+    margin: 20px auto; }
+    h1.stars span:before, h1.stars span:after, h2.stars span:before, h2.stars span:after, h3.stars span:before, h3.stars span:after, h4.stars span:before, h4.stars span:after {
+      top: -8px;
+      position: absolute;
+      background: url(../images/stars.png);
+      content: '';
+      width: 100px;
+      height: 49px;
+      background-repeat: no-repeat; }
+    h1.stars span:before, h2.stars span:before, h3.stars span:before, h4.stars span:before {
+      left: -115px;
+      -moz-transform: scale(-1, 1);
+      -webkit-transform: scale(-1, 1);
+      -o-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+      transform: scale(-1, 1); }
+    h1.stars span:after, h2.stars span:after, h3.stars span:after, h4.stars span:after {
+      right: -115px; }
 
 .grey__dark {
   color: #333333; }
@@ -863,7 +884,16 @@ h1, h2, h3, h4 {
     top: -50px; }
 
 .about_content {
-  background-color: #572580;
+  background: #572580;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#572580, #35a6de);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#572580, #35a6de);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#572580, #35a6de);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#572580, #35a6de);
+  /* Standard syntax */
   position: relative; }
 
 .fb-logo {
@@ -990,17 +1020,60 @@ h1, h2, h3, h4 {
   background: none; }
 
 .section {
-  background: #5977c2;
+  background: #572580;
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#35a6de, #5977c2);
+  background: -webkit-linear-gradient(#572580, #35a6de);
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#35a6de, #5977c2);
+  background: -o-linear-gradient(#572580, #35a6de);
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#35a6de, #5977c2);
+  background: -moz-linear-gradient(#572580, #35a6de);
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#35a6de, #5977c2);
-  /* Standard syntax */
-  position: relative; }
+  background: linear-gradient(#572580, #35a6de);
+  /* Standard syntax */ }
+  .section#news {
+    background: #faeba7;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#faeba7, #1c5294 70%);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#faeba7, #1c5294 70%);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#faeba7, #1c5294 70%);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#faeba7, #1c5294 70%);
+    /* Standard syntax */ }
+  .section#newsletter {
+    background: #1c5294 30%;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#1c5294 30%, #faeba7);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#1c5294 30%, #faeba7);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#1c5294 30%, #faeba7);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#1c5294 30%, #faeba7);
+    /* Standard syntax */ }
+  .section#infos {
+    background: #35a6de;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#35a6de, #572580);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#35a6de, #572580);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#35a6de, #572580);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#35a6de, #572580);
+    /* Standard syntax */ }
+  .section#getinthemood {
+    background: #35a6de;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#35a6de, #572580);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#35a6de, #572580);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#35a6de, #572580);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#35a6de, #572580);
+    /* Standard syntax */ }
   .section > div:first-of-type, .section .float_in_middle {
     max-width: 900px;
     margin: 0 auto; }
@@ -1887,8 +1960,8 @@ h1, h2, h3, h4 {
   font-weight: 900; }
 
 .blue__dark, .blue__dark > * {
-  color: #547eb8;
-  border-color: #547eb8; }
+  color: #1c5294;
+  border-color: #1c5294; }
 
 .bg--turquoise {
   background-color: #89d0d6; }

@@ -9,43 +9,22 @@
   $artists = new Artists();
 ?>
 <div class="o-pack o-pack--auto o-pack--middle">
-  <div class="o-pack__item palm-one-whole pl+ palm-pl0 text--center">
-    <h3 class="m0 pv clear palm-p0 palm-m0 left palm-one-whole"><span>LINEUP</span></h3>
-  </div><!--
-  --><div class="o-pack__item palm-hide">
-      <table class="1/1">
-        <tr>
-        <?
-          $i = 0;
-          foreach ($artists->getAll() as $artist) {
-            $i++;
-            $name = $artist['name'];
-            if (count($artist['link'])){
-              $name = '<a target="_blank" class="no-deco" href="'.$artist['link'].'">'.$name.'</a>';
-            }
-            echo "<td class='pv- font__amatic gamma ph'>".$name."</td>";
-
-            if ($i % 5 == 0) {
-              echo '</tr><tr>';
-            }
-
-          }
-        ?>
-        </tr>
-      </table>
-  </div><!--
-  --><div class="o-pack__item palm-one-whole hide palm-show o-layout palm-pl palm-pr0">
-  <?
-    foreach ($artists->getAll() as $artist) {
-      $name = $artist['name'];
-      if (count($artist['link'])){
-        $name = '<a target="_blank" class="no-deco" href="'.$artist['link'].'">'.$name.'</a>';
-      }
-      echo "<div class='pv- font__amatic text--center delta ph o-layout__item 1/2'>".$name."</div>";
-    }
-  ?>
-  </div><!--
-  --><div class="o-pack__item palm-one-whole palm-pl0 palm-text--center">
-    <div class="vertical bold mr gamma palm-pt">MORE TBA.</div>
+  <div class="palm-pl0 text--center">
+    <h3 class="stars m0 pv clear palm-p0 palm-m0 text--left"><span>LINEUP</span></h3>
   </div>
+  <div class="o-layout--flush">
+      <?
+        $i = 0;
+        foreach ($artists->getAll() as $artist) {
+          if (count($artist['link'])){
+            $name = '<div>'.$artist['name'].'</div>';
+            $link = '<a target="_blank" class="no-deco ml" href="'.$artist['link'].'">'.$artist['link'].'</a>';
+          }
+          echo "<div class='pv- font__amatic delta o-layout__item 1/2'>".$name.$link."</div>";
+        }
+      ?>
+
+  </div>
+
+
 </div>
