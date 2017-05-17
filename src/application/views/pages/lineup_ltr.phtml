@@ -16,8 +16,9 @@
       <?
         $i = 0;
         foreach ($artists->getAll() as $artist) {
+          $name = '<div class="ellipsis">'.$artist['name'].'</div>';
+          $link = '';
           if (count($artist['link'])){
-            $name = '<div class="ellipsis">'.$artist['name'].'</div>';
             $link = '<a target="_blank" class="ellipsis no-deco ml- palm-ml-- palm-mr0 palm-mb" href="'.$artist['link'].'">♫ '.$artist['link'].'</a>';
           }
           echo "<div class='pv- palm-ph- font__amatic delta o-layout__item 1/2 palm-1/1'>".$name.$link."</div>";
