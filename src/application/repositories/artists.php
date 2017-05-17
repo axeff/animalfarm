@@ -41,7 +41,7 @@ class Artists
       //   'link' => 'https://soundcloud.com/burnhard-1',
       // ],
       [
-        'name' => 'Carlo Capello',
+        'name' => 'Carlo Capello [Schwelgerei]',
         'link' => 'https://soundcloud.com/carlocapello',
       ],
       [
@@ -85,7 +85,7 @@ class Artists
         'link' => 'https://soundcloud.com/landhouse',
       ],
       [
-        'name' => 'Lascha von Chapel [Tbilisi]',
+        'name' => 'Lascha Chapel [Tbilisi]',
         'link' => 'https://soundcloud.com/lashachapel',
       ],
       [
