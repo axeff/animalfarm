@@ -91,6 +91,49 @@ h1, h2, h3, h4 {
   background: linear-gradient($color1, $color2); /* Standard syntax */
 }
 
+@include mq($from: rastercutter, $until:desk) {
+  div.stars-left {
+    display: inline-block;
+    position: relative;
+    margin: 20px auto;
+
+    &:before {
+      top: -28px;
+      position: absolute;
+      background: url(../images/stars-bigger.png);
+      content: '';
+      width: 179px;
+      height: 186px;
+      background-repeat: no-repeat;
+      left: -179px;
+
+      -moz-transform: scale(-1, 1);
+      -webkit-transform: scale(-1, 1);
+      -o-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+      transform: scale(-1, 1);
+    }
+  }
+
+  div.stars-right {
+    display: inline-block;
+    position: relative;
+    margin: 20px auto;
+
+    &:after {
+      top: -28px;
+      position: absolute;
+      background: url(../images/stars-bigger.png);
+      content: '';
+      width: 179px;
+      height: 186px;
+      background-repeat: no-repeat;
+      right: -179px;
+    }
+
+  }
+}
+
 .wrapper {
   margin: 80px;
   @include mq($from: lap, $until:desk) {
@@ -106,11 +149,7 @@ h1, h2, h3, h4 {
   left: 0;
   width: 80px;
   height: 80px;
-  background: $turquoise; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient($turquoise_light, $turquoise); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient($turquoise_light, $turquoise); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient($turquoise_light, $turquoise); /* For Firefox 3.6 to 15 */
-  background: linear-gradient($turquoise_light, $turquoise); /* Standard syntax */
+  @include gradient($turquoise_light, $turquoise);
 
   @include mq($from: lap, $until:desk) {
     width: 80px;
@@ -278,8 +317,8 @@ h1, h2, h3, h4 {
     &.yellow-to-blue {
       @include gradient($yellow2, $yellow3);
     }
-    &.blue2-to-blue3 {
-      @include gradient($blue_mid2, $blue_mid3);
+    &.blue_baby {
+      background-color: $blue_baby;
     }
     display: inline-flex;
     position: absolute;
@@ -321,6 +360,21 @@ h1, h2, h3, h4 {
     @include gradient($blue_baby, $lila);
   }
 
+  &#programm {
+    @include gradient($blue_baby, $blue_mid3);
+  }
+
+  &#lineup {
+    @include gradient(#35a6de 30%, $lila);
+    .teaser {
+      @include gradient(rgba(87, 37, 128, 0), $yellow);
+
+      h1 {
+        font-size: 4em;
+        line-height: .3em;
+      }
+    }
+  }
 
 
   > div:first-of-type, .float_in_middle {

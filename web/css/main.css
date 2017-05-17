@@ -819,6 +819,39 @@ h1, h2, h3, h4 {
 .font__lato, .grey__dark a, .outer-content a {
   font-family: 'Lato', sans-serif; }
 
+@media (min-width: 75em) and (max-width: 187.49em) {
+  div.stars-left {
+    display: inline-block;
+    position: relative;
+    margin: 20px auto; }
+    div.stars-left:before {
+      top: -28px;
+      position: absolute;
+      background: url(../images/stars-bigger.png);
+      content: '';
+      width: 179px;
+      height: 186px;
+      background-repeat: no-repeat;
+      left: -179px;
+      -moz-transform: scale(-1, 1);
+      -webkit-transform: scale(-1, 1);
+      -o-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+      transform: scale(-1, 1); }
+
+  div.stars-right {
+    display: inline-block;
+    position: relative;
+    margin: 20px auto; }
+    div.stars-right:after {
+      top: -28px;
+      position: absolute;
+      background: url(../images/stars-bigger.png);
+      content: '';
+      width: 179px;
+      height: 186px;
+      background-repeat: no-repeat;
+      right: -179px; } }
 .wrapper {
   margin: 80px; }
   @media (min-width: 48em) and (max-width: 187.49em) {
@@ -834,7 +867,7 @@ h1, h2, h3, h4 {
   left: 0;
   width: 80px;
   height: 80px;
-  background: #89d0d6;
+  background: #daf0ee;
   /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#daf0ee, #89d0d6);
   /* For Safari 5.1 to 6.0 */
@@ -998,17 +1031,8 @@ h1, h2, h3, h4 {
       /* For Firefox 3.6 to 15 */
       background: linear-gradient(#cfdbb4, #a1ccc0);
       /* Standard syntax */ }
-    .border h3.blue2-to-blue3, .border h4.blue2-to-blue3 {
-      background: #3f86c4;
-      /* For browsers that do not support gradients */
-      background: -webkit-linear-gradient(#3f86c4, #4178ba);
-      /* For Safari 5.1 to 6.0 */
-      background: -o-linear-gradient(#3f86c4, #4178ba);
-      /* For Opera 11.1 to 12.0 */
-      background: -moz-linear-gradient(#3f86c4, #4178ba);
-      /* For Firefox 3.6 to 15 */
-      background: linear-gradient(#3f86c4, #4178ba);
-      /* Standard syntax */ }
+    .border h3.blue_baby, .border h4.blue_baby {
+      background-color: #35a6de; }
     @media (min-width: 20em) and (max-width: 47.99em) {
       .border h3 > span, .border h4 > span {
         border: 6px solid #FFFFFF !important; } }
@@ -1074,6 +1098,42 @@ h1, h2, h3, h4 {
     /* For Firefox 3.6 to 15 */
     background: linear-gradient(#35a6de, #572580);
     /* Standard syntax */ }
+  .section#programm {
+    background: #35a6de;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#35a6de, #4178ba);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#35a6de, #4178ba);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#35a6de, #4178ba);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#35a6de, #4178ba);
+    /* Standard syntax */ }
+  .section#lineup {
+    background: #35a6de 30%;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#35a6de 30%, #572580);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#35a6de 30%, #572580);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#35a6de 30%, #572580);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#35a6de 30%, #572580);
+    /* Standard syntax */ }
+    .section#lineup .teaser {
+      background: rgba(87, 37, 128, 0);
+      /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(rgba(87, 37, 128, 0), #faeba7);
+      /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(rgba(87, 37, 128, 0), #faeba7);
+      /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(rgba(87, 37, 128, 0), #faeba7);
+      /* For Firefox 3.6 to 15 */
+      background: linear-gradient(rgba(87, 37, 128, 0), #faeba7);
+      /* Standard syntax */ }
+      .section#lineup .teaser h1 {
+        font-size: 4em;
+        line-height: .3em; }
   .section > div:first-of-type, .section .float_in_middle {
     max-width: 900px;
     margin: 0 auto; }
@@ -1999,6 +2059,64 @@ h1, h2, h3, h4 {
 
 .block {
   display: block; }
+
+.no-border, .no-border * {
+  border: 0; }
+
+.ellipsis {
+  width: 65%;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.lightbox-wrapper {
+  display: inline-block;
+  background: linear-gradient(#35a6de, #4178ba);
+  margin: 0px auto;
+  width: 100%;
+  display: none; }
+  @media (min-width: 48em) and (max-width: 187.49em) {
+    .lightbox-wrapper {
+      width: 50%; } }
+
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #fff; }
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+  opacity: 1; }
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+  opacity: 1; }
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fff; }
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #fff; }
+
+input[type="email"], input[type="text"] {
+  border: 0;
+  background-color: transparent;
+  color: white;
+  border-bottom: 5px solid white;
+  outline: none;
+  font-size: 20px; }
+
+input[type="submit"] {
+  border: none;
+  background-color: white;
+  color: #1c5294;
+  font-size: 20px;
+  width: 170px;
+  font-weight: bold; }
 
 /*------------------------------------*    #WIDTHS
 \*------------------------------------*/

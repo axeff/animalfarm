@@ -97,3 +97,60 @@
 .block {
   display: block;
 }
+
+.no-border, .no-border * {
+  border: 0;
+}
+
+.ellipsis {
+  width: 65%;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lightbox-wrapper {
+  display: inline-block;
+  background: linear-gradient(rgb(53, 166, 222), rgb(65, 120, 186));
+  margin: 0px auto;
+  width: 100%;
+  display: none;
+  @include mq($from: lap, $until:desk) {
+    width: 50%;
+  }
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+   color:    #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #fff;
+  opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #fff;
+  opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    #fff;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color:    #fff;
+}
+input[type="email"],input[type="text"] {
+   border: 0;
+   background-color: rgba(0, 0, 0, 0);
+   color: white;
+   border-bottom: 5px solid white;
+   outline: none;
+   font-size: 20px;
+}
+input[type="submit"] {
+  border: none;
+  background-color: white;
+  color: $blue_dark;
+  font-size: 20px;
+  width: 170px;
+  font-weight: bold
+}
