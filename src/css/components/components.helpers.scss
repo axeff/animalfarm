@@ -103,11 +103,14 @@
 }
 
 .ellipsis {
-  width: 65%;
+  width: 100%;
   overflow: hidden;
   display: inline-block;
   text-overflow: ellipsis;
   white-space: nowrap;
+  @include mq($from: palm, $until:lap) {
+    width: 90%;
+  }
 }
 
 .lightbox-wrapper {

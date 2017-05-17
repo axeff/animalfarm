@@ -2064,11 +2064,14 @@ h1, h2, h3, h4 {
   border: 0; }
 
 .ellipsis {
-  width: 65%;
+  width: 100%;
   overflow: hidden;
   display: inline-block;
   text-overflow: ellipsis;
   white-space: nowrap; }
+  @media (min-width: 20em) and (max-width: 47.99em) {
+    .ellipsis {
+      width: 90%; } }
 
 .lightbox-wrapper {
   display: inline-block;

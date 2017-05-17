@@ -30,12 +30,20 @@ class Artists
         'link' => 'https://soundcloud.com/bernstein_musik',
       ],
       [
+        "name" => "Betreutesträumen [Berlin]",
+        "link" => "https://soundcloud.com/betreutestraeumen",
+      ],
+      [
         'name' => 'Carli [Animal Farm]'
       ],
       // [
       //   'name' => 'Bernard Schiffbruch',
       //   'link' => 'https://soundcloud.com/burnhard-1',
       // ],
+      [
+        'name' => 'Carlo Capello',
+        'link' => 'https://soundcloud.com/carlocapello',
+      ],
       [
         'name' => 'David José & Christian Manuel [Zwischenmiete I Klickklackklub]',
         'link' => 'https://soundcloud.com/dav-dmolina',
@@ -46,6 +54,7 @@ class Artists
       ],
       [
         'name' => 'Elo [Live-Rap]',
+        'link' => 'https://soundcloud.com/followelo',
       ],
       [
         'name' => 'Franca [Feines Tier I W.I.R Schwestern]',
@@ -56,7 +65,7 @@ class Artists
         'link' => 'https://soundcloud.com/frau-kaufmann',
       ],
       [
-        "name" => "Jackie Houser-Brown [W.I.R]",
+        "name" => "Jackie Houser-Brown [W.I.R Schwestern]",
         "link" => "https://soundcloud.com/cocokillachemistry",
       ],
       [
@@ -96,10 +105,6 @@ class Artists
         "link" => "https://soundcloud.com/marvinhey",
       ],
       [
-        'name' => 'Max Gerolstein [Schwelgerei]',
-        'link' => 'https://soundcloud.com/maxravenstein',
-      ],
-      [
         'name' => 'Miguel Rodriguez + Tobi (Doyle Shepherd) + Steven Strahl [Golden Times]',
         'link' => 'https://soundcloud.com/miguelrodriguez',
       ],
@@ -109,6 +114,7 @@ class Artists
       ],
       [
         "name" => "Mr Pinc [Live-Rap]",
+        "link" => "https://mrpinc.bandcamp.com/releases",
       ],
       [
         'name' => 'Niemand & Keiner + Sawatzki [Rummel I Animal Farm I tanz + klangkombinat I Schiffbruch]',
