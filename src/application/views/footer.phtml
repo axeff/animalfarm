@@ -1,4 +1,5 @@
 <script src="<?=$_SERVER['REQUEST_URI']?>js/jquery-1.10.2.min.js"></script>
+<script src="<?=$_SERVER['REQUEST_URI']?>js/imagesloaded.pkgd.min.js"></script>
 <script src="<?=$_SERVER['REQUEST_URI']?>js/jquery.animatescroll.min.js"></script>
 <script src="<?=$_SERVER['REQUEST_URI']?>js/jquery.stickUp.min.js"></script>
 <script src="<?=$_SERVER['REQUEST_URI']?>js/jquery.fancybox.min.js"></script>
@@ -9,6 +10,12 @@
     $('.about_content img').css('top', '-'+($('.picture_header picture img').height()-15)+'px');
     $('.picture_header').css('top',$('.navigation').innerHeight() + 'px');
   }
+
+  $('.about_wrapper > .picture_header').imagesLoaded()
+    .done( function( instance ) {
+      recalculate();
+    });
+
 
   $(document).ready(function() {
     $( window ).resize(function() {
