@@ -34,6 +34,11 @@ class Artists
         "link" => "https://soundcloud.com/betreutestraeumen",
       ],
       [
+        "name" => "C0nne [Seasidetrip]",
+        "link" => "https://soundcloud.com/c0nne",
+      ],
+
+      [
         'name' => 'Carli [Animal Farm]'
       ],
       // [
@@ -45,8 +50,16 @@ class Artists
         'link' => 'https://soundcloud.com/carlocapello',
       ],
       [
+        "name" => "Cornelis [Bucht I Dr. Seltsam]",
+        "link" => "https://soundcloud.com/drcornelis",
+      ],
+      [
         'name' => 'David José & Christian Manuel [Zwischenmiete I Klickklackklub]',
         'link' => 'https://soundcloud.com/dav-dmolina',
+      ],
+      [
+        "name" => "David Keno [Keno Records I Katermukke]",
+        "link" => "https://soundcloud.com/david-keno",
       ],
       [
         'name' => 'Don Lockwood [Animal Farm]',
@@ -87,6 +100,9 @@ class Artists
       [
         'name' => 'Lascha Chapel [Tbilisi]',
         'link' => 'https://soundcloud.com/lashachapel',
+      ],
+      [
+        "name" => "Laura Weider [Live] (Wilde Agency)",
       ],
       [
         'name' => 'Manel Cluny [Animal Farm I Dazed State]',
@@ -153,6 +169,11 @@ class Artists
         'link' => 'https://soundcloud.com/sauerkrautmusic',
       ],
       [
+        "name" => "Schlepp Geist [URSL I Katermukke]",
+        "link" => "https://soundcloud.com/schleppgeist",
+      ],
+
+      [
         "name" => "Stas Kolbass [Mehr tanzen!]",
         "link" => "https://soundcloud.com/staskolbass",
       ],
@@ -163,7 +184,11 @@ class Artists
       [
         'name' => 'Vruno  [Nomade]',
         'link' => 'https://soundcloud.com/vrunomusic',
-      ]
+      ],
+      [
+        "name" => "Yanakuna",
+        "link" => "https://soundcloud.com/yanakuna",
+      ],      
     ];
   }
 
